@@ -1,7 +1,7 @@
 {
-  "name": "Kaplay Template",
-  "short_name": "Kaplay Template",
-  "description": "Kaplay Template",
+  "name": "Cross-Link",
+  "short_name": "Cross-Link",
+  "description": "Cross-Link",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
