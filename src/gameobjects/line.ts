@@ -55,9 +55,16 @@ export function addLine(dotA: Dot, dotB: Dot, lineColor: DotColor): Line {
     drawLine({
       p1: line.dotA.pos,
       p2: line.dotB.pos,
-      width: 3,
+      width: 8,
       color: rgb(r, g, b),
-      opacity: line.opacity * 0.75,
+      opacity: line.opacity * 0.12,
+    })
+    drawLine({
+      p1: line.dotA.pos,
+      p2: line.dotB.pos,
+      width: 2.5,
+      color: rgb(r, g, b),
+      opacity: line.opacity * 0.9,
     })
   })
 

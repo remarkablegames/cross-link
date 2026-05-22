@@ -304,9 +304,16 @@ scene(SCENE.GAME, (rawIndex = 0) => {
       drawLine({
         p1: selectedDot.pos,
         p2: mousePos(),
-        width: 2,
+        width: 8,
         color: rgb(r, g, b),
-        opacity: 0.4,
+        opacity: 0.08,
+      })
+      drawLine({
+        p1: selectedDot.pos,
+        p2: mousePos(),
+        width: 2.5,
+        color: rgb(r, g, b),
+        opacity: 0.55,
       })
     }
   })

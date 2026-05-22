@@ -63,25 +63,23 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
   ]) as Dot
 
   dot.onDraw(() => {
-    const baseOpacity = dot.connected ? 1.4 : 1
-    drawCircle({
-      pos: vec2(0, 0),
-      radius: HALO_RADIUS,
-      color: rgb(r, g, b),
-      opacity: 0.08 * baseOpacity,
-    })
-    drawCircle({
-      pos: vec2(0, 0),
-      radius: HALO_RADIUS * 0.7,
-      color: rgb(r, g, b),
-      opacity: 0.12 * baseOpacity,
-    })
-    drawCircle({
-      pos: vec2(0, 0),
-      radius: HALO_RADIUS * 0.45,
-      color: rgb(r, g, b),
-      opacity: 0.2 * baseOpacity,
-    })
+    const base = dot.connected ? 1.5 : 1
+    const rings = [
+      { scale: 1.0, opacity: 0.04 },
+      { scale: 0.85, opacity: 0.07 },
+      { scale: 0.7, opacity: 0.1 },
+      { scale: 0.55, opacity: 0.13 },
+      { scale: 0.4, opacity: 0.17 },
+      { scale: 0.25, opacity: 0.22 },
+    ]
+    for (const ring of rings) {
+      drawCircle({
+        pos: vec2(0, 0),
+        radius: HALO_RADIUS * ring.scale,
+        color: rgb(r, g, b),
+        opacity: ring.opacity * base,
+      })
+    }
   })
 
   dot.onHover(() => {
