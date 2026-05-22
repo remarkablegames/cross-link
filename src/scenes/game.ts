@@ -15,6 +15,7 @@ import { LEVELS } from '../levels'
 
 const BG_COLOR = [10, 10, 26] as const
 const HEADER_BG_COLOR = [13, 13, 43] as const
+const UI_COLOR = [180, 180, 220] as const
 const HEADER_H = 100
 const FOOTER_H = 100
 const GRID_OFFSET_Y = HEADER_H
@@ -110,7 +111,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     text(`Level ${String(levelIndex + 1)}`, { size: 26 }),
     pos(20, 30),
     anchor('left'),
-    color(220, 220, 255),
+    color(UI_COLOR[0], UI_COLOR[1], UI_COLOR[2]),
     z(12),
   ])
 
@@ -118,7 +119,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     text('Moves: 0', { size: 26 }),
     pos(width() - 20, 30),
     anchor('right'),
-    color(180, 180, 220),
+    color(UI_COLOR[0], UI_COLOR[1], UI_COLOR[2]),
     scale(1),
     z(12),
   ])
@@ -175,7 +176,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     text('↺ Restart', { size: 26 }),
     pos(width() / 2, height() - FOOTER_H / 2),
     anchor('center'),
-    color(180, 180, 220),
+    color(UI_COLOR[0], UI_COLOR[1], UI_COLOR[2]),
     area(),
     z(12),
   ])
@@ -185,7 +186,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     setCursor('pointer')
   })
   restartBtn.onHoverEnd(() => {
-    restartBtn.color = rgb(180, 180, 220)
+    restartBtn.color = rgb(UI_COLOR[0], UI_COLOR[1], UI_COLOR[2])
     setCursor('default')
   })
   restartBtn.onClick(() => {
