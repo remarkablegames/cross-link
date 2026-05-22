@@ -56,16 +56,17 @@ export const LEVELS: Level[] = [
   },
 
   {
-    // Level 4 — 4 pairs, tighter layout
-    // gold: (1,1)→(4,4), cyan: (4,1)→(1,4)
-    // rose: (0,2)→(5,3), violet: (2,0)→(3,5)
+    // Level 4 — 4 pairs, two interleaved order-constrained pairs
+    // gold: (1,0)→(4,5), cyan: (4,0)→(1,5) — diagonals crossing rose and violet
+    // rose: (0,2)→(5,2), violet: (0,3)→(5,3) — parallel horizontals, don't cross each other
+    // solution: rose → gold (crosses rose) → violet → cyan (crosses violet)
     map: [
-      '. . v . . .',
       '. g . . c .',
-      'r . . . . .',
-      '. . . . . r',
+      '. . . . . .',
+      'r . . . . r',
+      'v . . . . v',
+      '. . . . . .',
       '. c . . g .',
-      '. . . v . .',
     ],
     tileWidth: 100,
     tileHeight: 100,
