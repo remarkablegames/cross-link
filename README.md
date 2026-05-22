@@ -4,14 +4,14 @@
 
 # Cross-Link
 
-[![release](https://img.shields.io/github/v/release/remarkablegames/crosslink)](https://github.com/remarkablegames/crosslink/releases)
-[![build](https://github.com/remarkablegames/crosslink/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/crosslink/actions/workflows/build.yml)
+[![release](https://img.shields.io/github/v/release/remarkablegames/cross-link)](https://github.com/remarkablegames/cross-link/releases)
+[![build](https://github.com/remarkablegames/cross-link/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/cross-link/actions/workflows/build.yml)
 
 🔗 Cross-Link
 
 Play the game on:
 
-- [remarkablegames](https://remarkablegames.org/crosslink/)
+- [remarkablegames](https://remarkablegames.org/cross-link/)
 
 ## Prerequisites
 
@@ -26,24 +26,14 @@ brew install nvm
 Clone the repository:
 
 ```sh
-git clone https://github.com/remarkablegames/crosslink.git
-cd crosslink
+git clone https://github.com/remarkablegames/cross-link.git
+cd cross-link
 ```
 
 Install the dependencies:
 
 ```sh
 npm install
-```
-
-Rename the project:
-
-```sh
-git grep -l crosslink | xargs sed -i '' -e 's/crosslink/my-game/g'
-```
-
-```sh
-git grep -l 'Cross-Link' | xargs sed -i '' -e 's/Cross-Link/My Game/g'
 ```
 
 Update the files:
