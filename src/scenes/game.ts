@@ -68,7 +68,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   const level = LEVELS.at(levelIndex)
   if (!level) return
 
-  setBackground(BG_COLOR[0], BG_COLOR[1], BG_COLOR[2])
+  setBackground(...BG_COLOR)
   drawBgStars(60)
 
   const dots: Dot[] = []
@@ -78,17 +78,12 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   let hintStep = 0
   let clearing = false
 
-  add([
-    rect(width(), HEADER_H),
-    pos(0, 0),
-    color(HEADER_BG_COLOR[0], HEADER_BG_COLOR[1], HEADER_BG_COLOR[2]),
-    z(10),
-  ])
+  add([rect(width(), HEADER_H), pos(0, 0), color(...HEADER_BG_COLOR), z(10)])
 
   add([
     rect(width(), FOOTER_H),
     pos(0, height() - FOOTER_H),
-    color(HEADER_BG_COLOR[0], HEADER_BG_COLOR[1], HEADER_BG_COLOR[2]),
+    color(...HEADER_BG_COLOR),
     z(10),
   ])
 
@@ -111,7 +106,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     text(`Level ${String(levelIndex + 1)}`, { size: 26 }),
     pos(20, 30),
     anchor('left'),
-    color(UI_COLOR[0], UI_COLOR[1], UI_COLOR[2]),
+    color(...UI_COLOR),
     z(12),
   ])
 
@@ -119,7 +114,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     text('Moves: 0', { size: 26 }),
     pos(width() - 20, 30),
     anchor('right'),
-    color(UI_COLOR[0], UI_COLOR[1], UI_COLOR[2]),
+    color(...UI_COLOR),
     scale(1),
     z(12),
   ])
@@ -176,7 +171,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     text('↺ Restart', { size: 26 }),
     pos(width() / 2, height() - FOOTER_H / 2),
     anchor('center'),
-    color(UI_COLOR[0], UI_COLOR[1], UI_COLOR[2]),
+    color(...UI_COLOR),
     area(),
     z(12),
   ])
@@ -186,7 +181,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     setCursor('pointer')
   })
   restartBtn.onHoverEnd(() => {
-    restartBtn.color = rgb(UI_COLOR[0], UI_COLOR[1], UI_COLOR[2])
+    restartBtn.color = rgb(...UI_COLOR)
     setCursor('default')
   })
   restartBtn.onClick(() => {
