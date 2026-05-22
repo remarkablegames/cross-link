@@ -13,6 +13,13 @@ Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/cross-link/)
 
+## How to Play
+
+1. **Connect the dots** – Tap a colored star, then tap another star of the same color to draw a line between them.
+2. **Cross to clear** – When two or more lines cross, all connected pairs disappear. The goal is to clear all stars from the board.
+3. **Plan your moves** – The order in which you connect pairs matters. Think ahead to create crossings that clear multiple pairs at once.
+4. **Deselect** – Tap a selected star again to cancel, or tap anywhere else on the screen.
+
 ## Prerequisites
 
 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating):
