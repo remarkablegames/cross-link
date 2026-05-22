@@ -1,1 +1,1 @@
-export * from './gameobject'
+export type { Level } from './level'

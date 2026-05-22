@@ -1,4 +1,5 @@
 import './game'
+import './level-complete'
 import './preload'
 
 import { SCENE } from '../constants'
