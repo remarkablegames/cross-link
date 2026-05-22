@@ -38,9 +38,7 @@ npm install
 
 Update the files:
 
-- [ ] `README.md`
 - [ ] `index.html`
-- [ ] `package.json`
 - [ ] `public/app-icon.png`
 - [ ] `public/favicon.png`
 - [ ] `public/manifest.webmanifest`
@@ -84,6 +82,14 @@ Your game is ready to be deployed!
 Builds the game and compresses the contents into a ZIP archive in the `dist` folder.
 
 Your game can be uploaded to your server, [itch.io](https://itch.io/), [newgrounds](https://www.newgrounds.com/), etc.
+
+## Testing
+
+Open a specific level by appending `?level=<number>` to the URL (e.g., `?level=2`):
+
+```sh
+open http://localhost:5173/?level=5
+```
 
 ## License
 
