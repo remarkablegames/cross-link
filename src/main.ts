@@ -10,8 +10,6 @@ kaplay({
   font: 'Inter',
 })
 
-loadFont('Inter', 'fonts/InterVariable.woff2')
-
 const { start } = await import('./scenes')
 
 start()

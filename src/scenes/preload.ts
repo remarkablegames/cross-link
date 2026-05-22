@@ -2,6 +2,8 @@ import { SCENE } from '../constants'
 import { LEVELS } from '../levels'
 
 scene(SCENE.PRELOAD, () => {
+  loadFont('Inter', 'fonts/InterVariable.woff2')
+
   const params = new URLSearchParams(window.location.search)
   const raw = parseInt(params.get('level') ?? '1', 10)
   const levelIndex = Math.min(Math.max(raw - 1, 0), LEVELS.length - 1)
