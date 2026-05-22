@@ -50,6 +50,7 @@ export function addLine(dotA: Dot, dotB: Dot, lineColor: DotColor): Line {
       cyan: [79, 195, 247],
       rose: [244, 143, 177],
       green: [168, 224, 99],
+      white: [232, 232, 240],
     }
     const [r, g, b] = colorMap[lineColor]
     drawLine({

@@ -14,13 +14,14 @@ import { TAG } from '../constants'
 const DOT_RADIUS = 18
 const HALO_RADIUS = 36
 
-export type DotColor = 'gold' | 'cyan' | 'rose' | 'green'
+export type DotColor = 'gold' | 'cyan' | 'rose' | 'green' | 'white'
 
 const COLOR_MAP: Record<DotColor, [number, number, number]> = {
   gold: [245, 197, 66],
   cyan: [79, 195, 247],
   rose: [244, 143, 177],
   green: [168, 224, 99],
+  white: [232, 232, 240],
 }
 
 interface DotState {
