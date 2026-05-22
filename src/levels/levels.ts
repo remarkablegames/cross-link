@@ -73,16 +73,19 @@ export const LEVELS: Level[] = [
   },
 
   {
-    // Level 5 — 4 pairs, chain clearing (hardest)
-    // gold: (0,0)→(5,5), cyan: (5,0)→(0,5)
-    // rose: (1,2)→(4,3), violet: (2,1)→(3,4)
+    // Level 5 — 5 pairs, two gold pairs + strict sequence with a combo
+    // goldA: (1,0)→(4,5) ↘, goldB: (4,0)→(1,5) ↙ — same color, no cross
+    // rose:   (0,2)→(5,2) horizontal — crosses both golds
+    // violet: (0,3)→(5,3) horizontal — crosses both golds and cyan
+    // cyan:   (2,0)→(3,5) nearly vertical — crosses rose and violet
+    // solution: violet → cyan (crosses violet) → goldA → goldB → rose (combo: crosses both golds) ✅
     map: [
-      'g . . . . c',
-      '. . v . . .',
-      '. r . . . .',
-      '. . . . r .',
-      '. . . v . .',
-      'c . . . . g',
+      '. g c . g .',
+      '. . . . . .',
+      'r . . . . r',
+      'v . . . . v',
+      '. . . . . .',
+      '. g . c g .',
     ],
     tileWidth: 100,
     tileHeight: 100,
