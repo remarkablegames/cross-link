@@ -24,14 +24,14 @@ export const LEVELS: Level[] = [
 
   {
     // Level 2 — 3 pairs (gold + cyan + rose), draw order matters
-    // gold: (1,1)→(4,4), cyan: (4,1)→(1,4), rose: (0,2)→(5,3)
-    // rose line crosses both gold and cyan lines
+    // gold: (1,1)→(5,3), rose: (0,2)→(4,4), cyan: (4,1)→(1,4)
+    // solution: draw gold, rose (parallel, no cross), cyan last — crosses both
     map: [
       '. . . . . .',
       '. g . . c .',
       'r . . . . .',
-      '. . . . . r',
-      '. c . . g .',
+      '. . . . . g',
+      '. c . . r .',
       '. . . . . .',
     ],
     tileWidth: 100,
