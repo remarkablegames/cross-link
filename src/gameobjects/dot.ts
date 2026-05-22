@@ -11,8 +11,9 @@ import type {
 
 import { TAG } from '../constants'
 
-const DOT_RADIUS = 30
-const HALO_RADIUS = 44
+const DOT_RADIUS = 18
+const HALO_RADIUS = 36
+const TAP_RADIUS = 44
 
 export type DotColor = 'gold' | 'cyan' | 'rose' | 'violet'
 
@@ -52,9 +53,9 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
     scale(1),
     area({
       shape: new Rect(
-        vec2(-HALO_RADIUS, -HALO_RADIUS),
-        HALO_RADIUS * 2,
-        HALO_RADIUS * 2,
+        vec2(-TAP_RADIUS, -TAP_RADIUS),
+        TAP_RADIUS * 2,
+        TAP_RADIUS * 2,
       ),
     }),
     TAG.DOT,
@@ -62,11 +63,24 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
   ]) as Dot
 
   dot.onDraw(() => {
+    const baseOpacity = dot.connected ? 1.4 : 1
     drawCircle({
       pos: vec2(0, 0),
       radius: HALO_RADIUS,
       color: rgb(r, g, b),
-      opacity: dot.connected ? 0.35 : 0.2,
+      opacity: 0.08 * baseOpacity,
+    })
+    drawCircle({
+      pos: vec2(0, 0),
+      radius: HALO_RADIUS * 0.7,
+      color: rgb(r, g, b),
+      opacity: 0.12 * baseOpacity,
+    })
+    drawCircle({
+      pos: vec2(0, 0),
+      radius: HALO_RADIUS * 0.45,
+      color: rgb(r, g, b),
+      opacity: 0.2 * baseOpacity,
     })
   })
 

@@ -34,18 +34,30 @@ const COLOR_MAP: Record<DotColor, [number, number, number]> = {
 }
 
 function drawBgStars(count: number) {
+  const stars: { x: number; y: number; r: number; o: number }[] = []
   for (let i = 0; i < count; i++) {
-    const sx = rand(0, width())
-    const sy = rand(0, height())
-    const sr = rand(0.5, 2)
-    add([
-      pos(sx, sy),
-      anchor('center'),
-      circle(sr),
-      color(220, 220, 255),
-      opacity(rand(0.2, 0.6)),
-    ])
+    stars.push({
+      x: rand(0, width()),
+      y: rand(0, height()),
+      r: rand(0.5, 1.8),
+      o: rand(0.15, 0.55),
+    })
   }
+  add([
+    pos(0, 0),
+    {
+      draw() {
+        for (const s of stars) {
+          drawCircle({
+            pos: vec2(s.x, s.y),
+            radius: s.r,
+            color: rgb(210, 220, 255),
+            opacity: s.o,
+          })
+        }
+      },
+    },
+  ])
 }
 
 scene(SCENE.GAME, (rawIndex = 0) => {
