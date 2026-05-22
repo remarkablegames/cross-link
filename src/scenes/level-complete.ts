@@ -79,9 +79,11 @@ scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
 
   btn.onHover(() => {
     btn.color = rgb(255, 255, 255)
+    setCursor('pointer')
   })
   btn.onHoverEnd(() => {
     btn.color = rgb(200, 200, 255)
+    setCursor('default')
   })
   btn.onClick(() => {
     go(SCENE.GAME, hasNextLevel ? nextLevelIndex : 0)

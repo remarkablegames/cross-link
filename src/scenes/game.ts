@@ -182,9 +182,11 @@ scene(SCENE.GAME, (rawIndex = 0) => {
 
   restartBtn.onHover(() => {
     restartBtn.color = rgb(255, 255, 255)
+    setCursor('pointer')
   })
   restartBtn.onHoverEnd(() => {
     restartBtn.color = rgb(180, 180, 220)
+    setCursor('default')
   })
   restartBtn.onClick(() => {
     go(SCENE.GAME, levelIndex)

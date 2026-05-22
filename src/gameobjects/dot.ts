@@ -77,6 +77,7 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
   })
 
   dot.onHover(() => {
+    setCursor('pointer')
     if (!dot.connected) {
       tween(
         dot.scale.x,
@@ -91,6 +92,7 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
   })
 
   dot.onHoverEnd(() => {
+    setCursor('default')
     if (!dot.connected) {
       tween(
         dot.scale.x,
