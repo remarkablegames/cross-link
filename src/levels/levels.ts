@@ -41,7 +41,7 @@ export const LEVELS: Level[] = [
   {
     // Level 3 — Two independent X-crosses (4 pairs)
     // top cross: gold (1,0)→(4,2), cyan (4,0)→(1,2)
-    // bottom cross: rose (1,3)→(4,5), violet (4,3)→(1,5)
+    // bottom cross: rose (1,3)→(4,5), green (4,3)→(1,5)
     // solution: solve each X independently in either order
     map: [
       '. g . . c .',
@@ -57,9 +57,9 @@ export const LEVELS: Level[] = [
 
   {
     // Level 4 — 4 pairs, two interleaved order-constrained pairs
-    // gold: (1,0)→(4,5), cyan: (4,0)→(1,5) — diagonals crossing rose and violet
-    // rose: (0,2)→(5,2), violet: (0,3)→(5,3) — parallel horizontals, don't cross each other
-    // solution: rose → gold (crosses rose) → violet → cyan (crosses violet)
+    // gold: (1,0)→(4,5), cyan: (4,0)→(1,5) — diagonals crossing rose and green
+    // rose: (0,2)→(5,2), green: (0,3)→(5,3) — parallel horizontals, don't cross each other
+    // solution: rose → gold (crosses rose) → green → cyan (crosses green)
     map: [
       '. g . . c .',
       '. . . . . .',
@@ -76,9 +76,9 @@ export const LEVELS: Level[] = [
     // Level 5 — 5 pairs, two gold pairs + strict sequence with a combo
     // goldA: (1,0)→(4,5) ↘, goldB: (4,0)→(1,5) ↙ — same color, no cross
     // rose:   (0,2)→(5,2) horizontal — crosses both golds
-    // violet: (0,3)→(5,3) horizontal — crosses both golds and cyan
-    // cyan:   (2,0)→(3,5) nearly vertical — crosses rose and violet
-    // solution: violet → cyan (crosses violet) → goldA → goldB → rose (combo: crosses both golds) ✅
+    // green: (0,3)→(5,3) horizontal — crosses both golds and cyan
+    // cyan:   (2,0)→(3,5) nearly vertical — crosses rose and green
+    // solution: green → cyan (crosses green) → goldA → goldB → rose (combo: crosses both golds) ✅
     map: [
       '. g c . g .',
       '. . . . . .',

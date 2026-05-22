@@ -49,7 +49,7 @@ export function addLine(dotA: Dot, dotB: Dot, lineColor: DotColor): Line {
       gold: [245, 197, 66],
       cyan: [79, 195, 247],
       rose: [244, 143, 177],
-      violet: [206, 147, 216],
+      green: [168, 224, 99],
     }
     const [r, g, b] = colorMap[lineColor]
     drawLine({

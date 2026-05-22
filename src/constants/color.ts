@@ -1,4 +1,4 @@
 export const GOLD = '#f5c542'
 export const CYAN = '#4fc3f7'
 export const ROSE = '#f48fb1'
-export const VIOLET = '#ce93d8'
+export const GREEN = '#a8e063'

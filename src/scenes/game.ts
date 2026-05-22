@@ -23,14 +23,14 @@ const SYMBOL_COLOR: Partial<Record<string, DotColor>> = {
   g: 'gold',
   c: 'cyan',
   r: 'rose',
-  v: 'violet',
+  v: 'green',
 }
 
 const COLOR_MAP: Record<DotColor, [number, number, number]> = {
   gold: [245, 197, 66],
   cyan: [79, 195, 247],
   rose: [244, 143, 177],
-  violet: [206, 147, 216],
+  green: [168, 224, 99],
 }
 
 function drawBgStars(count: number) {
