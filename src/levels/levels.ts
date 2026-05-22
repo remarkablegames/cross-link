@@ -39,16 +39,17 @@ export const LEVELS: Level[] = [
   },
 
   {
-    // Level 3 — Combo: 3 pairs, one line crosses two others at once
-    // violet: (0,2)→(5,2) horizontal, gold: (1,0)→(1,4), cyan: (4,0)→(4,4)
-    // violet line crosses both gold and cyan
+    // Level 3 — Two independent X-crosses (4 pairs)
+    // top cross: gold (1,0)→(4,2), cyan (4,0)→(1,2)
+    // bottom cross: rose (1,3)→(4,5), violet (4,3)→(1,5)
+    // solution: solve each X independently in either order
     map: [
       '. g . . c .',
       '. . . . . .',
-      'v . . . . v',
+      '. c . . g .',
+      '. r . . v .',
       '. . . . . .',
-      '. g . . c .',
-      '. . . . . .',
+      '. v . . r .',
     ],
     tileWidth: 100,
     tileHeight: 100,
