@@ -115,7 +115,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   ])
 
   const moveText = add([
-    text('Moves: 0', { size: 22 }),
+    text('Moves: 0', { size: 26 }),
     pos(width() - 20, 30),
     anchor('right'),
     color(180, 180, 220),
@@ -172,7 +172,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   }
 
   const restartBtn = add([
-    text('↺ Restart', { size: 22 }),
+    text('↺ Restart', { size: 26 }),
     pos(width() / 2, height() - FOOTER_H / 2),
     anchor('center'),
     color(180, 180, 220),
