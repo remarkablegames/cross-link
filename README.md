@@ -7,7 +7,7 @@
 [![release](https://img.shields.io/github/v/release/remarkablegames/cross-link)](https://github.com/remarkablegames/cross-link/releases)
 [![build](https://github.com/remarkablegames/cross-link/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/cross-link/actions/workflows/build.yml)
 
-🔗 Cross-Link
+🔗 Connect the dots. Cross the lines.
 
 Play the game on:
 

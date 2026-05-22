@@ -1,7 +1,7 @@
 {
   "name": "cross-link",
   "version": "1.0.0-alpha",
-  "description": "Cross-Link",
+  "description": "Connect the dots. Cross the lines.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
     "build": "npm run clean && vite build",

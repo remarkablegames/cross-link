@@ -1,7 +1,7 @@
 {
   "name": "Cross-Link",
   "short_name": "Cross-Link",
-  "description": "Cross-Link",
+  "description": "Connect the dots. Cross the lines.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
