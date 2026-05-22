@@ -13,7 +13,6 @@ import { TAG } from '../constants'
 
 const DOT_RADIUS = 18
 const HALO_RADIUS = 36
-const TAP_RADIUS = 44
 
 export type DotColor = 'gold' | 'cyan' | 'rose' | 'violet'
 
@@ -51,13 +50,7 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
     color(r, g, b),
     opacity(1),
     scale(1),
-    area({
-      shape: new Rect(
-        vec2(-TAP_RADIUS, -TAP_RADIUS),
-        TAP_RADIUS * 2,
-        TAP_RADIUS * 2,
-      ),
-    }),
+    area(),
     TAG.DOT,
     { dotColor, connected: false } satisfies DotState,
   ]) as Dot
