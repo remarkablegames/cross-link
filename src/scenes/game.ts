@@ -93,8 +93,8 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   ])
 
   add([
-    text(`Level ${String(levelIndex + 1)}`, { size: 28 }),
-    pos(20, HEADER_H / 2),
+    text(`Level ${String(levelIndex + 1)}`, { size: 26 }),
+    pos(20, 30),
     anchor('left'),
     color(220, 220, 255),
     z(12),
@@ -102,7 +102,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
 
   const moveText = add([
     text('Moves: 0', { size: 22 }),
-    pos(width() - 20, HEADER_H / 2),
+    pos(width() - 20, 30),
     anchor('right'),
     color(180, 180, 220),
     scale(1),
@@ -110,10 +110,10 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   ])
 
   const hintText = add([
-    text('', { size: 20, width: width() - 40 }),
-    pos(width() / 2, HEADER_H / 2 + 16),
+    text('', { size: 18, width: width() - 40 }),
+    pos(width() / 2, 72),
     anchor('center'),
-    color(200, 200, 255),
+    color(160, 180, 255),
     opacity(0),
     z(12),
   ])
