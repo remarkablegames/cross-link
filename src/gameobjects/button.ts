@@ -11,16 +11,35 @@ export function addButton(
     anchor('center'),
     color(...UI.TEXT_COLOR),
     opacity(1),
+    scale(1),
     area(),
   ])
 
   button.onHover(() => {
     button.color = rgb(255, 255, 255)
+    tween(
+      button.scale.x,
+      1.1,
+      0.1,
+      (v) => {
+        button.scaleTo(v)
+      },
+      easings.easeOutQuad,
+    )
     setCursor('pointer')
   })
 
   button.onHoverEnd(() => {
     button.color = rgb(...UI.TEXT_COLOR)
+    tween(
+      button.scale.x,
+      1,
+      0.1,
+      (v) => {
+        button.scaleTo(v)
+      },
+      easings.easeOutQuad,
+    )
     setCursor('default')
   })
 
