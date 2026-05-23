@@ -99,20 +99,21 @@ export const LEVELS: Level[] = [
   },
 
   {
-    // Level 5 — 5 pairs, two gold pairs + strict sequence with a combo
+    // Level 5 — 6 pairs, two gold pairs + white combo, strict sequence
     // goldA: (2,1)→(9,10) ↘, goldB: (9,1)→(2,10) ↙ — same color, no cross
-    // rose:   (1,4)→(10,4) horizontal — crosses both golds
-    // green: (1,5)→(10,5) horizontal — crosses both golds and cyan
-    // cyan:   (4,1)→(5,10) nearly vertical — crosses rose and green
-    // solution: green → cyan (crosses green) → goldA → goldB → rose (combo: crosses both golds) ✅
+    // white: (1,3)→(10,3) — horizontal, crosses both golds
+    // rose:   (1,4)→(10,4) — horizontal, crosses both golds and white
+    // green: (1,6)→(10,6) — horizontal, crosses golds and cyan
+    // cyan:   (4,1)→(7,10) — diagonal, crosses green and white
+    // solution: cyan → green → goldA → goldB → white → rose (combo crosses all 3) ✅
     map: [
       '. . . . . . . . . . . .',
-      '. . g . c . . . . g . .',
+      '. . g . . c . . . g . .',
       '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
+      '. w . . . . . . . . w .',
       '. r . . . . . . . . r .',
-      '. v . . . . . . . . v .',
       '. . . . . . . . . . . .',
+      '. v . . . . . . . . v .',
       '. . . . . . . . . . . .',
       '. . . . . . . . . . . .',
       '. . g . . c . . . g . .',
