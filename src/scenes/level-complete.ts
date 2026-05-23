@@ -1,4 +1,5 @@
 import { SCENE } from '../constants'
+import { addButton } from '../gameobjects/button'
 import { LEVELS } from '../levels'
 
 scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
@@ -46,15 +47,11 @@ scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
 
   const btnLabel = hasNextLevel ? 'Next Level →' : 'Play Again'
 
-  const btn = add([
-    text(btnLabel, { size: 28 }),
-    pos(width() / 2, height() / 2 + 20),
-    anchor('center'),
-    color(200, 200, 255),
-    area(),
-    opacity(0),
-  ])
+  const btn = addButton(btnLabel, vec2(width() / 2, height() / 2 + 20), () => {
+    go(SCENE.GAME, hasNextLevel ? nextLevelIndex : 0)
+  })
 
+  btn.opacity = 0
   wait(0.5, () => {
     tween(
       0,
@@ -65,17 +62,5 @@ scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
       },
       easings.easeOutQuad,
     )
-  })
-
-  btn.onHover(() => {
-    btn.color = rgb(255, 255, 255)
-    setCursor('pointer')
-  })
-  btn.onHoverEnd(() => {
-    btn.color = rgb(200, 200, 255)
-    setCursor('default')
-  })
-  btn.onClick(() => {
-    go(SCENE.GAME, hasNextLevel ? nextLevelIndex : 0)
   })
 })

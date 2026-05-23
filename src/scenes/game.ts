@@ -1,4 +1,5 @@
 import { SCENE, TAG, UI } from '../constants'
+import { addButton } from '../gameobjects/button'
 import {
   addDot,
   animateDotSelect,
@@ -140,23 +141,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     }
   }
 
-  const restartBtn = add([
-    text('↺ Restart', { size: UI.TEXT_SIZE }),
-    pos(width() / 2, height() - FOOTER_H / 2),
-    anchor('center'),
-    color(...UI.TEXT_COLOR),
-    area(),
-  ])
-
-  restartBtn.onHover(() => {
-    restartBtn.color = rgb(255, 255, 255)
-    setCursor('pointer')
-  })
-  restartBtn.onHoverEnd(() => {
-    restartBtn.color = rgb(...UI.TEXT_COLOR)
-    setCursor('default')
-  })
-  restartBtn.onClick(() => {
+  addButton('↺ Restart', vec2(width() / 2, height() - FOOTER_H / 2), () => {
     go(SCENE.GAME, levelIndex)
   })
 
