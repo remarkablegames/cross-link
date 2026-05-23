@@ -54,8 +54,8 @@ export const LEVELS: Level[] = [
 
   {
     // Level 3 — 3 pairs (gold + cyan + rose), draw order matters
-    // gold: (2,2)→(10,5), rose: (1,3)→(9,8), cyan: (9,3)→(2,9)
-    // solution: draw gold, rose (parallel, no cross), cyan last — crosses both
+    // gold: (2,2)→(10,5), rose: (1,3)→(9,8), white: (1,6)→(7,10), cyan: (9,3)→(2,9)
+    // solution: draw gold, rose, white (parallel, no cross), cyan last — crosses both
     map: [
       '. . . . . . . . . . . .',
       '. . . . . . . . . . . .',
@@ -63,16 +63,16 @@ export const LEVELS: Level[] = [
       '. r . . . . . . . . . .',
       '. . . . . . . . . . . .',
       '. . . . . . . . . g . .',
-      '. . . . . . . . . . . .',
+      '. w . . . . . . . . . .',
       '. . . . . . . . . . . .',
       '. . c . . . . . . r . .',
       '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
+      '. . . . . . . w . . . .',
       '. . . . . . . . . . . .',
     ],
     tileWidth: 50,
     tileHeight: 50,
-    hints: ['Does the draw order matter?'],
+    hints: ['Draw order matters'],
   },
 
   {
