@@ -51,30 +51,7 @@ export const LEVELS: Level[] = [
   },
 
   {
-    // Level 3 — Two independent X-crosses (4 pairs)
-    // top cross: gold (2,1)→(9,3), cyan (9,1)→(2,3)
-    // bottom cross: rose (2,6)→(9,8), green (9,6)→(2,8)
-    // solution: solve each X independently in either order
-    map: [
-      '. . . . . . . . . . . .',
-      '. . g . . . . . . c . .',
-      '. . . . . . . . . . . .',
-      '. . c . . . . . . g . .',
-      '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
-      '. . r . . . . . . v . .',
-      '. . . . . . . . . . . .',
-      '. . v . . . . . . r . .',
-      '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
-    ],
-    tileWidth: 50,
-    tileHeight: 50,
-  },
-
-  {
-    // Level 4 — 4 pairs, two interleaved order-constrained pairs
+    // Level 3 — 4 pairs, two interleaved order-constrained pairs
     // gold: (2,1)→(9,10), cyan: (9,1)→(2,10) — diagonals crossing rose and green
     // rose: (1,4)→(10,4), green: (1,5)→(10,5) — parallel horizontals, don't cross each other
     // solution: rose → gold (crosses rose) → green → cyan (crosses green)
@@ -89,6 +66,30 @@ export const LEVELS: Level[] = [
       '. . . . . . . . . . . .',
       '. . . . . . . . . . . .',
       '. . c . . . . . . g . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+    ],
+    tileWidth: 50,
+    tileHeight: 50,
+  },
+
+  {
+    // Level 4 — 4 pairs with chain interaction (rose crosses all, order matters)
+    // gold: (2,2)→(9,9), cyan: (9,2)→(2,9) — diagonal X crossing
+    // rose: (1,5)→(10,5) — horizontal crosses both gold and cyan
+    // green: (5,1)→(5,10) — vertical crosses all three
+    // solution: green → rose (crosses green) → gold → cyan (crosses gold), or similar
+    map: [
+      '. . . . . . . . . . . .',
+      '. . g . . v . . . c . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. r . . . . . . . . r .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . c . . v . . . g . .',
       '. . . . . . . . . . . .',
       '. . . . . . . . . . . .',
     ],
