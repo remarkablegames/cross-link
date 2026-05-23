@@ -77,10 +77,10 @@ export const LEVELS: Level[] = [
     // Level 4 — 6 pairs, two gold pairs + white combo, strict sequence
     // goldA: (2,1)→(9,10) ↘, goldB: (9,1)→(2,10) ↙ — same color, no cross
     // white: (1,3)→(10,3) — horizontal, crosses both golds
-    // rose:   (1,4)→(10,4) — horizontal, crosses both golds and white
+    // rose: (1,4)→(10,4) — horizontal, crosses both golds and white
     // green: (1,6)→(10,6) — horizontal, crosses golds and cyan
-    // cyan:   (4,1)→(7,10) — diagonal, crosses green and white
-    // solution: cyan → green → goldA → goldB → white → rose (combo crosses all 3) ✅
+    // cyan: (4,1)→(7,10) — diagonal, crosses green and white
+    // solution: cyan → green → goldA → goldB → white → rose (combo crosses all 3)
     map: [
       '. . . . . . . . . . . .',
       '. . g . . c . . . g . .',
@@ -105,7 +105,7 @@ export const LEVELS: Level[] = [
     // rose: (5,1)→(5,11) — vertical at col 5, crosses both golds (used twice)
     // cyan: (2,6)→(5,3) — diagonal ↗ crosses goldA at (3.5,4)
     // green: (8,6)→(5,9) — diagonal ↙ crosses goldB at (6.5,9)
-    // solution: cyan → goldA → rose (clears) → green → goldB → rose (clears) ✅
+    // solution: cyan → goldA → rose (clears) → green → goldB → rose (clears)
     map: [
       '. . . . . r . . . . . .',
       '. . . . . . . . . . . .',
