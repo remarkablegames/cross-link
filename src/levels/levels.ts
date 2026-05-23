@@ -1,5 +1,34 @@
 import type { Level } from '../types'
 
+/*
+ * Level Design Guide
+ * ==================
+ *
+ * Complexity levers (stack these to increase difficulty):
+ *
+ *  1. More pairs — each additional color pair adds more intersections to reason about
+ *  2. Draw order — arrange lines so the player must draw A before B (B can only cross A if A exists)
+ *  3. Same color, multiple pairs — two gold pairs look identical; the player must figure out
+ *     which gold pair to draw first based on what it needs to cross
+ *  4. Reused bridge lines — a single line (e.g. rose vertical) crosses two different-color lines
+ *     at different points, so it must be drawn *after* both, acting as a chain finisher
+ *  5. Combo clears — position a line so it crosses 2+ existing lines simultaneously;
+ *     the player must set up all those lines first
+ *  6. Interleaved chains — two independent sub-chains that must be solved in strict alternation
+ *     (e.g. cyanA → goldA → white → cyanB → goldB → rose)
+ *
+ * Constraints:
+ *  - Each color must appear exactly twice — one dot per endpoint of a pair (always even count)
+ *
+ * Pitfalls to avoid:
+ *  - Parallel same-color lines can never cross each other — don't place them so only a
+ *    parallel crossing would solve the level
+ *  - Make sure every line in the solution has at least one valid crossing partner already on
+ *    the board when it's drawn (i.e. the solution sequence is actually achievable)
+ *  - Avoid layouts where trial-and-error is the only strategy — at least one visual cue
+ *    should hint at the intended sequence
+ */
+
 export const LEVELS: Level[] = [
   {
     // Level 1 — Tutorial: 2 pairs (gold + cyan), simple X cross
