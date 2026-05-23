@@ -96,7 +96,7 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
-    hints: ['Some lines need to be crossed before others'],
+    hints: ['Perfect the sequence'],
   },
 
   {
@@ -123,7 +123,7 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
-    hints: ['A line can cross more than once'],
+    hints: ['Can one line do the work of many?'],
   },
 
   {
@@ -149,6 +149,6 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
-    hints: ['The same line can clear more than one pair'],
+    hints: ['Some lines are worth drawing twice'],
   },
 ]
