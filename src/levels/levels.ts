@@ -123,7 +123,7 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
-    hints: ['Can one line do the work of many?'],
+    hints: ['One line can do the work of many'],
   },
 
   {
@@ -150,5 +150,33 @@ export const LEVELS: Level[] = [
     tileWidth: 50,
     tileHeight: 50,
     hints: ['Some lines are worth drawing twice'],
+  },
+
+  {
+    // Level 7 — 6 pairs (2 gold + 2 cyan + rose + white), two reused bridge lines
+    // goldA: (2,1)→(9,10) ↘, goldB: (9,1)→(2,10) ↙
+    // cyanA: (2,4)→(9,4) —, cyanB: (2,7)→(9,7) —
+    // rose: (1,3)→(10,3) — horizontal, crosses both golds
+    // white: (1,8)→(10,8) — horizontal, crosses both golds
+    // goldA crosses cyanA and white; goldB crosses cyanB and rose
+    // rose crosses goldB (and white if rose drawn after white — invalid); white crosses goldA
+    // solution: cyanA → goldA (crosses cyanA) → white (crosses goldA) → cyanB → goldB (crosses cyanB) → rose (crosses goldB)
+    map: [
+      '. . . . . . . . . . . .',
+      '. . g . . . . . . g . .',
+      '. . . . . . . . . . . .',
+      '. r . . . . . . . . r .',
+      '. . c . . . . . c . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . c . . . . . c . . .',
+      '. w . . . . . . . . w .',
+      '. . . . . . . . . . . .',
+      '. . g . . . . . . g . .',
+      '. . . . . . . . . . . .',
+    ],
+    tileWidth: 50,
+    tileHeight: 50,
+    hints: ['Which pair do you draw first?'],
   },
 ]
