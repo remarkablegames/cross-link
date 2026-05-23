@@ -74,32 +74,7 @@ export const LEVELS: Level[] = [
   },
 
   {
-    // Level 4 — 4 pairs with same-color gold (parallel horizontals, can't cross)
-    // goldA: (2,4)→(9,4), goldB: (2,9)→(9,9) — parallel horizontals, same color
-    // rose: (5,1)→(5,11) — vertical at col 5, crosses both golds (used twice)
-    // cyan: (2,6)→(5,3) — diagonal ↗ crosses goldA at (3.5,4)
-    // green: (8,6)→(5,9) — diagonal ↙ crosses goldB at (6.5,9)
-    // solution: cyan → goldA → rose (clears) → green → goldB → rose (clears) ✅
-    map: [
-      '. . . . . r . . . . . .',
-      '. . . . . . . . . . . .',
-      '. . . . . c . . . . . .',
-      '. g . . . . . . . g . .',
-      '. . . . . . . . . . . .',
-      '. c . . . . . . v . . .',
-      '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
-      '. g . . v . . . . g . .',
-      '. . . . . r . . . . . .',
-      '. . . . . . . . . . . .',
-    ],
-    tileWidth: 50,
-    tileHeight: 50,
-  },
-
-  {
-    // Level 5 — 6 pairs, two gold pairs + white combo, strict sequence
+    // Level 4 — 6 pairs, two gold pairs + white combo, strict sequence
     // goldA: (2,1)→(9,10) ↘, goldB: (9,1)→(2,10) ↙ — same color, no cross
     // white: (1,3)→(10,3) — horizontal, crosses both golds
     // rose:   (1,4)→(10,4) — horizontal, crosses both golds and white
@@ -118,6 +93,31 @@ export const LEVELS: Level[] = [
       '. . . . . . . . . . . .',
       '. . g . . c . . . g . .',
       '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+    ],
+    tileWidth: 50,
+    tileHeight: 50,
+  },
+
+  {
+    // Level 5 — 4 pairs with same-color gold (parallel horizontals, can't cross)
+    // goldA: (2,4)→(9,4), goldB: (2,9)→(9,9) — parallel horizontals, same color
+    // rose: (5,1)→(5,11) — vertical at col 5, crosses both golds (used twice)
+    // cyan: (2,6)→(5,3) — diagonal ↗ crosses goldA at (3.5,4)
+    // green: (8,6)→(5,9) — diagonal ↙ crosses goldB at (6.5,9)
+    // solution: cyan → goldA → rose (clears) → green → goldB → rose (clears) ✅
+    map: [
+      '. . . . . r . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . c . . . . . .',
+      '. g . . . . . . . g . .',
+      '. . . . . . . . . . . .',
+      '. c . . . . . . v . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. g . . v . . . . g . .',
+      '. . . . . r . . . . . .',
       '. . . . . . . . . . . .',
     ],
     tileWidth: 50,
