@@ -84,7 +84,6 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     pos(20, 30),
     anchor('left'),
     color(...UI_COLOR),
-    z(12),
   ])
 
   const moveText = add([
@@ -93,7 +92,6 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     anchor('right'),
     color(...UI_COLOR),
     scale(1),
-    z(12),
   ])
 
   const hintText = add([
@@ -102,7 +100,6 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     anchor('center'),
     color(160, 180, 255),
     opacity(0),
-    z(12),
   ])
 
   function showHint(msg: string) {
@@ -150,7 +147,6 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     anchor('center'),
     color(...UI_COLOR),
     area(),
-    z(12),
   ])
 
   restartBtn.onHover(() => {
