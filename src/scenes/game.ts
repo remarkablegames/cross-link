@@ -1,4 +1,4 @@
-import { SCENE, TAG } from '../constants'
+import { SCENE, TAG, UI } from '../constants'
 import {
   addDot,
   animateDotSelect,
@@ -13,7 +13,6 @@ import {
 } from '../gameobjects/line'
 import { LEVELS } from '../levels'
 
-const UI_COLOR = [180, 180, 220] as const
 const HEADER_H = 100
 const FOOTER_H = 100
 const GRID_OFFSET_Y = HEADER_H
@@ -80,22 +79,22 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   let clearing = false
 
   add([
-    text(`Level ${String(levelIndex + 1)}`, { size: 26 }),
+    text(`Level ${String(levelIndex + 1)}`, { size: UI.TEXT_SIZE }),
     pos(20, 30),
     anchor('left'),
-    color(...UI_COLOR),
+    color(...UI.TEXT_COLOR),
   ])
 
   const moveText = add([
-    text('Moves: 0', { size: 26 }),
+    text('Moves: 0', { size: UI.TEXT_SIZE }),
     pos(width() - 20, 30),
     anchor('right'),
-    color(...UI_COLOR),
+    color(...UI.TEXT_COLOR),
     scale(1),
   ])
 
   const hintText = add([
-    text('', { size: 18, width: width() - 40 }),
+    text('', { size: UI.TEXT_SIZE - 8, width: width() - 40 }),
     pos(width() / 2, 72),
     anchor('center'),
     color(160, 180, 255),
@@ -142,10 +141,10 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   }
 
   const restartBtn = add([
-    text('↺ Restart', { size: 26 }),
+    text('↺ Restart', { size: UI.TEXT_SIZE }),
     pos(width() / 2, height() - FOOTER_H / 2),
     anchor('center'),
-    color(...UI_COLOR),
+    color(...UI.TEXT_COLOR),
     area(),
   ])
 
@@ -154,7 +153,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     setCursor('pointer')
   })
   restartBtn.onHoverEnd(() => {
-    restartBtn.color = rgb(...UI_COLOR)
+    restartBtn.color = rgb(...UI.TEXT_COLOR)
     setCursor('default')
   })
   restartBtn.onClick(() => {
