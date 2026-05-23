@@ -74,23 +74,24 @@ export const LEVELS: Level[] = [
   },
 
   {
-    // Level 4 — 4 pairs with chain interaction (rose crosses all, order matters)
-    // gold: (2,2)→(9,9), cyan: (9,2)→(2,9) — diagonal X crossing
-    // rose: (1,5)→(10,5) — horizontal crosses both gold and cyan
-    // green: (5,1)→(5,10) — vertical crosses all three
-    // solution: green → rose (crosses green) → gold → cyan (crosses gold), or similar
+    // Level 4 — 4 pairs with same-color gold (parallel horizontals, can't cross)
+    // goldA: (2,4)→(9,4), goldB: (2,9)→(9,9) — parallel horizontals, same color
+    // rose: (5,1)→(5,11) — vertical at col 5, crosses both golds (used twice)
+    // cyan: (2,6)→(5,3) — diagonal ↗ crosses goldA at (3.5,4)
+    // green: (8,6)→(5,9) — diagonal ↙ crosses goldB at (6.5,9)
+    // solution: cyan → goldA → rose (clears) → green → goldB → rose (clears) ✅
     map: [
+      '. . . . . r . . . . . .',
       '. . . . . . . . . . . .',
-      '. . g . . v . . . c . .',
+      '. . . . . c . . . . . .',
+      '. g . . . . . . . g . .',
+      '. . . . . . . . . . . .',
+      '. c . . . . . . v . . .',
       '. . . . . . . . . . . .',
       '. . . . . . . . . . . .',
       '. . . . . . . . . . . .',
-      '. r . . . . . . . . r .',
-      '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
-      '. . . . . . . . . . . .',
-      '. . c . . v . . . g . .',
-      '. . . . . . . . . . . .',
+      '. g . . v . . . . g . .',
+      '. . . . . r . . . . . .',
       '. . . . . . . . . . . .',
     ],
     tileWidth: 50,
