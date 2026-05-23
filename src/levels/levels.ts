@@ -49,6 +49,7 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
+    hints: ['Can the same color clear lines?'],
   },
 
   {
@@ -71,6 +72,7 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
+    hints: ['Does the draw order matter?'],
   },
 
   {
@@ -94,6 +96,7 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
+    hints: ['Some lines need to be crossed before others'],
   },
 
   {
@@ -120,6 +123,7 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
+    hints: ['A line can cross more than once'],
   },
 
   {
@@ -145,5 +149,6 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
+    hints: ['The same line can clear more than one pair'],
   },
 ]
