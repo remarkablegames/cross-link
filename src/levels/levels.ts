@@ -208,4 +208,27 @@ export const LEVELS: Level[] = [
     tileHeight: 50,
     hints: ['Which pair do you draw first?'],
   },
+
+  {
+    // Level 8 — 7 pairs (2 gold + 2 cyan + rose + white + green), interior dots
+    // Colors: g=gold (2 pairs), c=cyan (2 pairs), r=rose, w=white, v=green
+    // solution: cyanA → cyanB → green (crosses both cyans) → rose → goldA (crosses rose) → white → goldB (crosses white)
+    map: [
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . g . . . c . . w . .',
+      '. . . . r . . . . . . .',
+      '. . . . . . . g . . . .',
+      '. . . c . . . . . v . .',
+      '. . . . . g . . . . . .',
+      '. w . . . . . . r . . .',
+      '. . . v . . . . . c . .',
+      '. . . . . . g . c . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+    ],
+    tileWidth: 50,
+    tileHeight: 50,
+    hints: ['Not all crossings are obvious'],
+  },
 ]
