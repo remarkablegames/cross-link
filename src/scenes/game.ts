@@ -49,12 +49,12 @@ function drawBgStars(count: number) {
   add([
     {
       draw() {
-        for (const s of stars) {
+        for (const star of stars) {
           drawCircle({
-            pos: vec2(s.x, s.y),
-            radius: s.r,
+            pos: vec2(star.x, star.y),
+            radius: star.r,
             color: rgb(210, 220, 255),
-            opacity: s.o,
+            opacity: star.o,
           })
         }
       },
