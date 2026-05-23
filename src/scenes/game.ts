@@ -13,8 +13,6 @@ import {
 } from '../gameobjects/line'
 import { LEVELS } from '../levels'
 
-const BG_COLOR = [10, 10, 26] as const
-const HEADER_BG_COLOR = [13, 13, 43] as const
 const UI_COLOR = [180, 180, 220] as const
 const HEADER_H = 100
 const FOOTER_H = 100
@@ -67,9 +65,11 @@ function drawBgStars(count: number) {
 scene(SCENE.GAME, (rawIndex = 0) => {
   const levelIndex = Number(rawIndex)
   const level = LEVELS.at(levelIndex)
-  if (!level) return
 
-  add([rect(width(), height()), color(...BG_COLOR)])
+  if (!level) {
+    return
+  }
+
   drawBgStars(60)
 
   const dots: Dot[] = []
@@ -78,30 +78,6 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   let moveCount = 0
   let hintStep = 0
   let clearing = false
-
-  add([rect(width(), HEADER_H), color(...HEADER_BG_COLOR), z(10)])
-
-  add([
-    rect(width(), FOOTER_H),
-    pos(0, height() - FOOTER_H),
-    color(...HEADER_BG_COLOR),
-    z(10),
-  ])
-
-  add([
-    rect(width(), 1),
-    pos(0, HEADER_H),
-    color(255, 255, 255),
-    opacity(0.08),
-    z(11),
-  ])
-  add([
-    rect(width(), 1),
-    pos(0, height() - FOOTER_H),
-    color(255, 255, 255),
-    opacity(0.08),
-    z(11),
-  ])
 
   add([
     text(`Level ${String(levelIndex + 1)}`, { size: 26 }),
