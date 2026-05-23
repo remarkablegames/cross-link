@@ -1,14 +1,18 @@
 import kaplay from 'kaplay'
 
+import { addStars } from './stars'
+
 kaplay({
   width: 600,
   height: 800,
   stretch: true,
   letterbox: true,
-  background: [10, 10, 26],
+  background: [0, 0, 0, 0],
   scale: 4,
   font: 'Inter',
 })
+
+addStars(150)
 
 const { start } = await import('./scenes')
 

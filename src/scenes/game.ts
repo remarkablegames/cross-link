@@ -38,6 +38,7 @@ const COLOR_MAP: Record<DotColor, [number, number, number]> = {
 
 function drawBgStars(count: number) {
   const stars: { x: number; y: number; r: number; o: number }[] = []
+
   for (let i = 0; i < count; i++) {
     stars.push({
       x: rand(0, width()),
@@ -46,8 +47,8 @@ function drawBgStars(count: number) {
       o: rand(0.15, 0.55),
     })
   }
+
   add([
-    pos(0, 0),
     {
       draw() {
         for (const s of stars) {
@@ -68,7 +69,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   const level = LEVELS.at(levelIndex)
   if (!level) return
 
-  setBackground(...BG_COLOR)
+  add([rect(width(), height()), color(...BG_COLOR)])
   drawBgStars(60)
 
   const dots: Dot[] = []
@@ -78,7 +79,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   let hintStep = 0
   let clearing = false
 
-  add([rect(width(), HEADER_H), pos(0, 0), color(...HEADER_BG_COLOR), z(10)])
+  add([rect(width(), HEADER_H), color(...HEADER_BG_COLOR), z(10)])
 
   add([
     rect(width(), FOOTER_H),

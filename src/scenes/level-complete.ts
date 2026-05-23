@@ -6,13 +6,9 @@ const HEADER_BG_COLOR = [13, 13, 43] as const
 
 scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
   const levelIndex = Number(rawIndex)
-  setBackground(BG_COLOR[0], BG_COLOR[1], BG_COLOR[2])
 
-  add([
-    rect(width(), height()),
-    color(HEADER_BG_COLOR[0], HEADER_BG_COLOR[1], HEADER_BG_COLOR[2]),
-    opacity(0.6),
-  ])
+  add([rect(width(), height()), color(...BG_COLOR)])
+  add([rect(width(), height()), color(...HEADER_BG_COLOR), opacity(0.6)])
 
   const titleText = add([
     text('✦ Level Complete ✦', { size: 36 }),
