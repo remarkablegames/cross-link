@@ -94,7 +94,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   ])
 
   const hintText = add([
-    text('', { size: UI.TEXT_SIZE - 8, width: width() - 40 }),
+    text('', { size: UI.TEXT_SIZE - 6, width: width() - 40 }),
     pos(width() / 2, 72),
     anchor('center'),
     color(160, 180, 255),
