@@ -15,7 +15,15 @@ scene(SCENE.PRELOAD, () => {
   loadSound(SOUND.CLICK, 'sounds/click.mp3')
 
   const params = new URLSearchParams(window.location.search)
-  const raw = parseInt(params.get('level') ?? '1', 10)
-  const levelIndex = Math.min(Math.max(raw - 1, 0), LEVELS.length - 1)
-  go(SCENE.GAME, levelIndex)
+  const levelParam = params.get('level')
+
+  if (levelParam) {
+    const levelIndex = Math.min(
+      Math.max(parseInt(levelParam, 10) - 1, 0),
+      LEVELS.length - 1,
+    )
+    go(SCENE.GAME, levelIndex)
+  } else {
+    go(SCENE.TITLE)
+  }
 })

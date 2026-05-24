@@ -1,6 +1,7 @@
 import './game'
 import './level-complete'
 import './preload'
+import './title'
 
 import { SCENE } from '../constants'
 
