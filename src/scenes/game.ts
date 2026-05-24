@@ -14,6 +14,7 @@ import {
 } from '../gameobjects/line'
 import { addMuteButton } from '../gameobjects/mute-button'
 import { LEVELS } from '../levels'
+import { saveLevel } from '../utils/progress'
 
 const HEADER_H = 100
 const FOOTER_H = 100
@@ -85,6 +86,8 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   if (!level) {
     return
   }
+
+  saveLevel(levelIndex)
 
   drawBgStars(150)
 

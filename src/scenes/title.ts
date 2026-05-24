@@ -4,6 +4,7 @@ import { COLOR, SCENE } from '../constants'
 import { addButton } from '../gameobjects/button'
 import { addMuteButton } from '../gameobjects/mute-button'
 import { startMusic } from '../utils/music'
+import { loadLevel } from '../utils/progress'
 
 const ORBITAL_COLORS: [number, number, number][] = [
   COLOR.GOLD_RGB,
@@ -157,10 +158,16 @@ scene(SCENE.TITLE, () => {
     }
   })
 
-  addButton('Play', vec2(width() / 2, height() / 2 + 60), () => {
-    startMusic()
-    go(SCENE.GAME, 0)
-  })
+  const level = loadLevel()
+
+  addButton(
+    !level ? 'Start' : 'Continue',
+    vec2(width() / 2, height() / 2 + 60),
+    () => {
+      startMusic()
+      go(SCENE.GAME, level)
+    },
+  )
 
   addMuteButton()
 })

@@ -1,8 +1,8 @@
 import type { AudioPlay } from 'kaplay'
 
-import { SOUND } from '../constants'
+import { SOUND, STORAGE } from '../constants'
 
-const STORAGE_KEY = 'org.remarkablegames.cross-link.muted'
+const STORAGE_KEY = `${STORAGE.PREFIX}.muted`
 
 let musicHandle: AudioPlay | null = null
 
