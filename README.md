@@ -24,14 +24,9 @@ Play the game on:
 
 ## Credits
 
-### Music
-
-- [alkakrab](https://alkakrab.itch.io/free-sci-fi-music-2)
-
-### Sound
-
-- [Helton Yan & Beto Bezerra](https://heltonyan.itch.io/pixelcombat)
-- [Shapeforms](https://shapeforms.itch.io/shapeforms-audio-free-sfx)
+- [Sci-Fi Music](https://alkakrab.itch.io/free-sci-fi-music-2) by alkakrab
+- [Pixel Combat](https://heltonyan.itch.io/pixelcombat) by Helton Yan & Beto Bezerra
+- [Sound Effects](https://shapeforms.itch.io/shapeforms-audio-free-sfx) by Shapeforms
 
 ## Prerequisites
 
