@@ -9,10 +9,11 @@
 
 🔗 Connect the dots. Cross the lines.
 
-Cross-Link is a puzzle game about connections — drawing lines between matching stars to form constellations, then crossing those lines to make them vanish. Each level is a star map waiting to be untangled: pair up the dots, weave your lines across each other, and watch the night sky clear one crossing at a time.
+<kbd>Cross-Link</kbd> is a puzzle game about connections — drawing lines between matching stars to form constellations, then crossing those lines to make them vanish. Each level is a star map waiting to be untangled: pair up the dots, weave your lines across each other, and watch the night sky clear one crossing at a time.
 
 Play the game on:
 
+- [itch.io](https://remarkablegames.itch.io/cross-link)
 - [remarkablegames](https://remarkablegames.org/cross-link/)
 
 ## How to Play
