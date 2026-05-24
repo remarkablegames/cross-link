@@ -14,6 +14,7 @@
 Play the game on:
 
 - [itch.io](https://remarkablegames.itch.io/cross-link)
+- [Wavedash](https://wavedash.com/games/cross-link)
 - [remarkablegames](https://remarkablegames.org/cross-link/)
 
 ## How to Play
@@ -91,6 +92,12 @@ Your game is ready to be deployed!
 Builds the game and compresses the contents into a ZIP archive in the `dist` folder.
 
 Your game can be uploaded to your server, [itch.io](https://itch.io/), [newgrounds](https://www.newgrounds.com/), etc.
+
+Builds the game for [Wavedash](https://wavedash.com/dev-portal):
+
+```sh
+WAVEDASH=true npm run bundle
+```
 
 ## Testing
 
