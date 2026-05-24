@@ -231,4 +231,29 @@ export const LEVELS: Level[] = [
     tileHeight: 50,
     hints: ['Not all crossings are obvious'],
   },
+
+  /*
+  Level N — [description]: [N] pairs ([colors])
+  [colorA]: ([col],[row])→([col],[row]) [direction], [colorB]: ([col],[row])→([col],[row]) [direction]
+  solution: [colorA] → [colorB] → ... (crosses [colorX])
+  {
+    map: [
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+      '. . . . . . . . . . . .',
+    ],
+    tileWidth: 50,
+    tileHeight: 50,
+    hints: [''],
+  },
+  */
 ]
