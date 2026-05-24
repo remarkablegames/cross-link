@@ -1,12 +1,14 @@
 import { SCENE, SOUND } from '../constants'
 import { addButton } from '../gameobjects/button'
 import { addMuteButton } from '../gameobjects/mute-button'
+import { addStarBurst } from '../gameobjects/star-burst'
 import { LEVELS } from '../levels'
 
 scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
   const levelIndex = Number(rawIndex)
 
   play(SOUND.WIN, { volume: 0.5 })
+  addStarBurst()
 
   const titleText = add([
     text('✦ Level Complete ✦', { size: 36 }),
