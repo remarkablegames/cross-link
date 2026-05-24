@@ -27,6 +27,7 @@ const COLOR_MAP: Record<DotColor, [number, number, number]> = {
 interface DotState {
   dotColor: DotColor
   connected: boolean
+  deselecting: boolean
 }
 
 export type Dot = GameObj<
@@ -53,7 +54,7 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
     scale(1),
     area(),
     TAG.DOT,
-    { dotColor, connected: false } satisfies DotState,
+    { dotColor, connected: false, deselecting: false } satisfies DotState,
   ]) as Dot
 
   dot.onDraw(() => {
@@ -94,7 +95,7 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
 
   dot.onHoverEnd(() => {
     setCursor('default')
-    if (!dot.connected) {
+    if (!dot.connected && !dot.deselecting) {
       tween(
         dot.scale.x,
         1,
@@ -167,15 +168,39 @@ export function animateDotSelect(dot: Dot) {
 export function cancelDotSelectPulse(dot: Dot) {
   selectPulseCancels.get(dot)?.()
   selectPulseCancels.delete(dot)
+
+  if (dot.exists()) {
+    dot.deselecting = true
+    dot.scaleTo(1.3)
+  }
+
   tween(
-    dot.scale.x,
-    1,
-    0.15,
+    1.3,
+    0.8,
+    0.12,
     (v) => {
-      if (dot.exists()) dot.scaleTo(v)
+      if (dot.exists()) {
+        dot.scaleTo(v)
+      }
     },
-    easings.easeOutQuad,
-  )
+    easings.easeInQuad,
+  ).then(() => {
+    tween(
+      0.8,
+      1,
+      0.3,
+      (v) => {
+        if (dot.exists()) {
+          dot.scaleTo(v)
+        }
+      },
+      easings.easeOutElastic,
+    ).then(() => {
+      if (dot.exists()) {
+        dot.deselecting = false
+      }
+    })
+  })
 }
 
 export function animateDotClear(dot: Dot, onDone: () => void) {
