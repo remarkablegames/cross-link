@@ -49,20 +49,7 @@ scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
 
   const btnLabel = hasNextLevel ? 'Next Level →' : 'Play Again'
 
-  const btn = addButton(btnLabel, vec2(width() / 2, height() / 2 + 20), () => {
+  addButton(btnLabel, vec2(width() / 2, height() / 2 + 20), () => {
     go(SCENE.GAME, hasNextLevel ? nextLevelIndex : 0)
-  })
-
-  btn.opacity = 0
-  wait(0.5, () => {
-    tween(
-      0,
-      1,
-      0.3,
-      (v) => {
-        btn.opacity = v
-      },
-      easings.easeOutQuad,
-    )
   })
 })

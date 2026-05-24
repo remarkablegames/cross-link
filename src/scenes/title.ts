@@ -155,20 +155,7 @@ scene(SCENE.TITLE, () => {
     }
   })
 
-  const btn = addButton('Play', vec2(width() / 2, height() / 2 + 60), () => {
+  addButton('Play', vec2(width() / 2, height() / 2 + 60), () => {
     go(SCENE.GAME, 0)
-  })
-
-  btn.opacity = 0
-  wait(0.4, () => {
-    tween(
-      0,
-      1,
-      0.4,
-      (v) => {
-        btn.opacity = v
-      },
-      easings.easeOutQuad,
-    )
   })
 })
