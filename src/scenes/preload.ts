@@ -11,6 +11,7 @@ scene(SCENE.PRELOAD, () => {
   loadSound(SOUND.WIN, 'sounds/win.mp3')
   loadSound(SOUND.DOT_HOVER, 'sounds/dot-hover.mp3')
   loadSound(SOUND.BUTTON_HOVER, 'sounds/button-hover.mp3')
+  loadSound(SOUND.ERROR, 'sounds/error.mp3')
   loadSound(SOUND.CLICK, 'sounds/click.mp3')
 
   const params = new URLSearchParams(window.location.search)

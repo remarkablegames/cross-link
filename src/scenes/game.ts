@@ -234,6 +234,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
       }
 
       if (selectedDot.dotColor !== dot.dotColor) {
+        play(SOUND.ERROR, { volume: 0.5 })
         return
       }
 
@@ -268,6 +269,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     }
 
     if (selectedDot) {
+      play(SOUND.ERROR, { volume: 0.5 })
       selectedDot.connected = false
       selectedDot = null
     }
