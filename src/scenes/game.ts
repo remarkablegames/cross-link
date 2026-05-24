@@ -295,19 +295,22 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   onDraw(() => {
     if (selectedDot?.exists()) {
       const [r, g, b] = COLOR_MAP[selectedDot.dotColor]
+      const pulse = 0.7 + Math.sin(time() * 6) * 0.3
+
       drawLine({
         p1: selectedDot.pos,
         p2: mousePos(),
         width: 8,
         color: rgb(r, g, b),
-        opacity: 0.08,
+        opacity: 0.04 + pulse * 0.1,
       })
+
       drawLine({
         p1: selectedDot.pos,
         p2: mousePos(),
         width: 2.5,
         color: rgb(r, g, b),
-        opacity: 0.55,
+        opacity: 0.35 + pulse * 0.35,
       })
     }
   })
