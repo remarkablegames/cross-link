@@ -255,6 +255,28 @@ export const LEVELS: Level[] = [
     hints: ['Every chain has a first link'],
   },
 
+  {
+    // Level 10 — [description]: 12 pairs (3 gold + 3 cyan + 2 rose + 2 green + 2 white)
+    // solution: cyan → cyan (clears both) → green → white → gold (clears both) → rose → gold (clears both) → rose → gold (clears both)
+    map: [
+      '. . . c . . . . g . . .',
+      '. . . . . w . . . . r .',
+      '. g . . . . . c . . . .',
+      '. . . . r . . . g . . .',
+      '. . . . . . . . . c . .',
+      '. v . . . . . . . . g .',
+      '. . . . . . w . . . . .',
+      '. . r . . . . . . v . .',
+      '. c . . . g . . . . . .',
+      '. . . . . . . . c . . .',
+      '. . . . g . . r . . . .',
+      '. c . . . . . . . . . .',
+    ],
+    tileWidth: 50,
+    tileHeight: 50,
+    hints: ['Save the hardest for last'],
+  },
+
   /*
   Level N — [description]: [N] pairs ([colors])
   [colorA]: ([col],[row])→([col],[row]) [direction], [colorB]: ([col],[row])→([col],[row]) [direction]
