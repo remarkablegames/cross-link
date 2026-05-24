@@ -1,4 +1,4 @@
-import { SCENE, TAG, UI } from '../constants'
+import { SCENE, SOUND, TAG, UI } from '../constants'
 import { addButton } from '../gameobjects/button'
 import {
   addDot,
@@ -222,6 +222,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
         selectedDot = dot
         dot.connected = true
         animateDotSelect(dot)
+        play(SOUND.SELECT)
         advanceHint(hintStep + 1)
         return
       }
@@ -240,6 +241,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
       const newLine = addLine(selectedDot, dot, dot.dotColor)
       lines.push(newLine)
       moveCount++
+      play(SOUND.CONNECT, { volume: 0.5 })
       updateMoveText()
       advanceHint(hintStep + 1)
 
@@ -254,6 +256,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
           dots.splice(dots.indexOf(l.dotB), 1)
         }
         advanceHint(hintStep + 1)
+        play(hits.length > 1 ? SOUND.CLEAR_MULTIPLE : SOUND.CLEAR)
         clearLines(toClear, () => {
           clearing = false
           checkWin()

@@ -1,9 +1,11 @@
-import { SCENE } from '../constants'
+import { SCENE, SOUND } from '../constants'
 import { addButton } from '../gameobjects/button'
 import { LEVELS } from '../levels'
 
 scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
   const levelIndex = Number(rawIndex)
+
+  play(SOUND.WIN, { volume: 0.5 })
 
   const titleText = add([
     text('✦ Level Complete ✦', { size: 36 }),

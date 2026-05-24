@@ -1,4 +1,4 @@
-import { UI } from '../constants'
+import { SOUND, UI } from '../constants'
 
 export function addButton(
   label: string,
@@ -16,6 +16,7 @@ export function addButton(
   ])
 
   button.onHover(() => {
+    play(SOUND.BUTTON_HOVER, { volume: 0.5 })
     button.color = rgb(255, 255, 255)
     tween(
       button.scale.x,
@@ -43,7 +44,10 @@ export function addButton(
     setCursor('default')
   })
 
-  button.onClick(onClick)
+  button.onClick(() => {
+    play(SOUND.CLICK)
+    onClick()
+  })
 
   return button
 }

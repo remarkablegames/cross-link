@@ -9,7 +9,7 @@ import type {
   ScaleComp,
 } from 'kaplay'
 
-import { TAG } from '../constants'
+import { SOUND, TAG } from '../constants'
 
 const DOT_RADIUS = 18
 const HALO_RADIUS = 36
@@ -79,6 +79,7 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
   dot.onHover(() => {
     setCursor('pointer')
     if (!dot.connected) {
+      play(SOUND.DOT_HOVER, { volume: 0.5 })
       tween(
         dot.scale.x,
         1.15,

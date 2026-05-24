@@ -1,0 +1,8 @@
+export const SELECT = 'select'
+export const CONNECT = 'connect'
+export const CLEAR = 'clear'
+export const CLEAR_MULTIPLE = 'clear_multiple'
+export const WIN = 'win'
+export const DOT_HOVER = 'dot_hover'
+export const BUTTON_HOVER = 'button_hover'
+export const CLICK = 'click'
