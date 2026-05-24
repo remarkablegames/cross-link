@@ -58,7 +58,7 @@ function drawBgStars(count: number) {
 scene(SCENE.TITLE, () => {
   drawBgStars(150)
 
-  const titleCenter = vec2(width() / 2, height() / 2 - 120)
+  const titleCenter = vec2(width() / 2, height() / 2 - 90)
 
   const titleText = add([
     text('CROSS-LINK', { size: 48 }),
@@ -162,7 +162,7 @@ scene(SCENE.TITLE, () => {
 
   addButton(
     !level ? 'Start' : 'Continue',
-    vec2(width() / 2, height() / 2 + 60),
+    vec2(width() / 2, height() / 2 + 90),
     () => {
       startMusic()
       go(SCENE.GAME, level)
@@ -170,7 +170,7 @@ scene(SCENE.TITLE, () => {
   )
 
   if (level > 0) {
-    addButton('Restart', vec2(width() / 2, height() / 2 + 130), () => {
+    addButton('Restart', vec2(width() / 2, height() / 2 + 160), () => {
       startMusic()
       go(SCENE.GAME, 0)
     })
