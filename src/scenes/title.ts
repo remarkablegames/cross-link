@@ -169,5 +169,12 @@ scene(SCENE.TITLE, () => {
     },
   )
 
+  if (level > 0) {
+    addButton('Restart', vec2(width() / 2, height() / 2 + 130), () => {
+      startMusic()
+      go(SCENE.GAME, 0)
+    })
+  }
+
   addMuteButton()
 })
