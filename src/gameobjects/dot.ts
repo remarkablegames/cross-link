@@ -110,7 +110,39 @@ export function addDot(x: number, y: number, dotColor: DotColor): Dot {
   return dot
 }
 
+const selectPulseCancels = new WeakMap<Dot, () => void>()
+
 export function animateDotSelect(dot: Dot) {
+  let cancelled = false
+
+  selectPulseCancels.set(dot, () => {
+    cancelled = true
+  })
+
+  function pulse() {
+    if (cancelled || !dot.exists()) return
+    tween(
+      1.1,
+      1.25,
+      0.4,
+      (v) => {
+        if (!cancelled && dot.exists()) dot.scaleTo(v)
+      },
+      easings.easeInOutSine,
+    ).then(() => {
+      if (cancelled || !dot.exists()) return
+      tween(
+        1.25,
+        1.1,
+        0.4,
+        (v) => {
+          if (!cancelled && dot.exists()) dot.scaleTo(v)
+        },
+        easings.easeInOutSine,
+      ).then(pulse)
+    })
+  }
+
   tween(
     1,
     1.3,
@@ -128,8 +160,22 @@ export function animateDotSelect(dot: Dot) {
         dot.scaleTo(v)
       },
       easings.easeOutQuad,
-    )
+    ).then(pulse)
   })
+}
+
+export function cancelDotSelectPulse(dot: Dot) {
+  selectPulseCancels.get(dot)?.()
+  selectPulseCancels.delete(dot)
+  tween(
+    dot.scale.x,
+    1,
+    0.15,
+    (v) => {
+      if (dot.exists()) dot.scaleTo(v)
+    },
+    easings.easeOutQuad,
+  )
 }
 
 export function animateDotClear(dot: Dot, onDone: () => void) {

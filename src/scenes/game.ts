@@ -3,6 +3,7 @@ import { addButton } from '../gameobjects/button'
 import {
   addDot,
   animateDotSelect,
+  cancelDotSelectPulse,
   type Dot,
   type DotColor,
 } from '../gameobjects/dot'
@@ -238,6 +239,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
       }
 
       if (selectedDot === dot) {
+        cancelDotSelectPulse(selectedDot)
         selectedDot.connected = false
         selectedDot = null
         return
@@ -245,10 +247,14 @@ scene(SCENE.GAME, (rawIndex = 0) => {
 
       if (selectedDot.dotColor !== dot.dotColor) {
         play(SOUND.ERROR, { volume: 0.5 })
+        cancelDotSelectPulse(selectedDot)
+        selectedDot.connected = false
+        selectedDot = null
         return
       }
 
       dot.connected = true
+      cancelDotSelectPulse(selectedDot)
       const newLine = addLine(selectedDot, dot, dot.dotColor)
       lines.push(newLine)
       moveCount++
@@ -280,6 +286,7 @@ scene(SCENE.GAME, (rawIndex = 0) => {
 
     if (selectedDot) {
       play(SOUND.ERROR, { volume: 0.5 })
+      cancelDotSelectPulse(selectedDot)
       selectedDot.connected = false
       selectedDot = null
     }
