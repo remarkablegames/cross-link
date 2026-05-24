@@ -22,6 +22,13 @@ Play the game on:
 3. **Plan your moves** – The order in which you connect pairs matters. Think ahead to create crossings that clear multiple pairs at once.
 4. **Deselect** – Tap a selected star again to cancel, or tap anywhere else on the screen.
 
+## Credits
+
+### Sound
+
+- [Helton Yan & Beto Bezerra](https://heltonyan.itch.io/pixelcombat)
+- [Shapeforms](https://shapeforms.itch.io/shapeforms-audio-free-sfx)
+
 ## Prerequisites
 
 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating):
