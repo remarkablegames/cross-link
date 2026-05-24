@@ -111,6 +111,16 @@ Open a specific level by appending `?level=<number>` to the URL (e.g., `?level=2
 open http://localhost:5173/?level=5
 ```
 
+## Cover
+
+To view the static cover art for screenshots, append `?cover` to the URL:
+
+```sh
+open http://localhost:5173/?cover
+```
+
+This displays a 512×512 centered composition with the game title and 3 colored dots arranged in a triangle constellation pattern — ideal for taking cover art screenshots.
+
 ## License
 
 [MIT](LICENSE)

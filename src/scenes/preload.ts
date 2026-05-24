@@ -16,15 +16,21 @@ scene(SCENE.PRELOAD, () => {
   loadSound(SOUND.CLICK, 'sounds/click.mp3')
 
   const params = new URLSearchParams(window.location.search)
-  const levelParam = params.get('level')
 
+  if (params.has('cover')) {
+    go(SCENE.COVER)
+    return
+  }
+
+  const levelParam = params.get('level')
   if (levelParam) {
     const levelIndex = Math.min(
       Math.max(parseInt(levelParam, 10) - 1, 0),
       LEVELS.length - 1,
     )
     go(SCENE.GAME, levelIndex)
-  } else {
-    go(SCENE.TITLE)
+    return
   }
+
+  go(SCENE.TITLE)
 })
