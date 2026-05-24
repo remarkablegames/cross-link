@@ -4,6 +4,7 @@ import { LEVELS } from '../levels'
 scene(SCENE.PRELOAD, () => {
   loadFont('Inter', 'fonts/InterVariable.woff2')
 
+  loadSound(SOUND.MUSIC, 'sounds/music.mp3')
   loadSound(SOUND.SELECT, 'sounds/select.mp3')
   loadSound(SOUND.CONNECT, 'sounds/connect.mp3')
   loadSound(SOUND.CLEAR, 'sounds/clear.mp3')

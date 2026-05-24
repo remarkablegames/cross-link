@@ -1,5 +1,6 @@
 import { SCENE, SOUND } from '../constants'
 import { addButton } from '../gameobjects/button'
+import { addMuteButton } from '../gameobjects/mute-button'
 import { LEVELS } from '../levels'
 
 scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
@@ -52,4 +53,6 @@ scene(SCENE.LEVEL_COMPLETE, (rawIndex = 0) => {
   addButton(btnLabel, vec2(width() / 2, height() / 2 + 20), () => {
     go(SCENE.GAME, hasNextLevel ? nextLevelIndex : 0)
   })
+
+  addMuteButton()
 })

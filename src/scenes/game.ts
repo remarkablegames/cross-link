@@ -12,6 +12,7 @@ import {
   findIntersectingLines,
   type Line,
 } from '../gameobjects/line'
+import { addMuteButton } from '../gameobjects/mute-button'
 import { LEVELS } from '../levels'
 
 const HEADER_H = 100
@@ -101,9 +102,11 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     color(...UI.TEXT_COLOR),
   ])
 
+  addMuteButton()
+
   const moveText = add([
     text('Moves: 0', { size: UI.TEXT_SIZE }),
-    pos(width() - 20, 30),
+    pos(width() - 65, 30),
     anchor('right'),
     color(...UI.TEXT_COLOR),
     scale(1),

@@ -24,6 +24,10 @@ Play the game on:
 
 ## Credits
 
+### Music
+
+- [alkakrab](https://alkakrab.itch.io/free-sci-fi-music-2)
+
 ### Sound
 
 - [Helton Yan & Beto Bezerra](https://heltonyan.itch.io/pixelcombat)

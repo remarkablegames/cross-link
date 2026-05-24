@@ -2,6 +2,8 @@ import type { GameObj, PosComp, ScaleComp } from 'kaplay'
 
 import { COLOR, SCENE } from '../constants'
 import { addButton } from '../gameobjects/button'
+import { addMuteButton } from '../gameobjects/mute-button'
+import { startMusic } from '../music'
 
 const ORBITAL_COLORS: [number, number, number][] = [
   COLOR.GOLD_RGB,
@@ -156,6 +158,9 @@ scene(SCENE.TITLE, () => {
   })
 
   addButton('Play', vec2(width() / 2, height() / 2 + 60), () => {
+    startMusic()
     go(SCENE.GAME, 0)
   })
+
+  addMuteButton()
 })

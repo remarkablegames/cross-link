@@ -1,3 +1,4 @@
+export const MUSIC = 'music'
 export const SELECT = 'select'
 export const CONNECT = 'connect'
 export const CLEAR = 'clear'
