@@ -8,8 +8,8 @@ import type { Level } from '../types'
  *
  *  1. More pairs — each additional color pair adds more intersections to reason about
  *  2. Draw order — arrange lines so the player must draw A before B (B can only cross A if A exists)
- *  3. Same color, multiple pairs — two gold pairs look identical; the player must figure out
- *     which gold pair to draw first based on what it needs to cross
+ *  3. Same color, multiple pairs — same-color pairs look identical (e.g. 2–3 gold pairs);
+ *     the player must figure out which pair to draw first based on what it needs to cross
  *  4. Reused bridge lines — a single line (e.g. rose vertical) crosses two different-color lines
  *     at different points, so it must be drawn *after* both, acting as a chain finisher
  *  5. Combo clears — position a line so it crosses 2+ existing lines simultaneously;
@@ -18,7 +18,8 @@ import type { Level } from '../types'
  *     (e.g. cyanA → goldA → white → cyanB → goldB → rose)
  *
  * Constraints:
- *  - Each color must appear exactly twice — one dot per endpoint of a pair (always even count)
+ *  - Available colors: g=gold, c=cyan, r=rose, v=green, w=white
+ *  - Each color must appear an even number of times — dots pair up, so 2, 4, 6, … per color
  *
  * Pitfalls to avoid:
  *  - Parallel same-color lines can never cross each other — don't place them so only a
@@ -230,6 +231,28 @@ export const LEVELS: Level[] = [
     tileWidth: 50,
     tileHeight: 50,
     hints: ['Not all crossings are obvious'],
+  },
+
+  {
+    // Level 9 — [description]: 10 pairs (3 gold + 2 cyan + 2 rose + green + 2 white)
+    // solution: [TBD]
+    map: [
+      '. . . . . r . . g . . .',
+      '. . . g . . . . r . . .',
+      '. w . . . . g . . . . .',
+      '. . . . . . . . . c . .',
+      '. . g . . . . . . . . .',
+      '. . . . . v . . . r . .',
+      '. . . . . . . . . w . .',
+      '. . . . c . . . . . . .',
+      '. . . r . . . . . . . .',
+      '. . . . . . . g . . . .',
+      '. . . . . v . . . . . .',
+      '. . . g . c . . c . . .',
+    ],
+    tileWidth: 50,
+    tileHeight: 50,
+    hints: [''],
   },
 
   /*
