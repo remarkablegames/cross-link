@@ -1,6 +1,6 @@
 {
   "name": "cross-link",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "Connect the dots. Cross the lines.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
