@@ -159,9 +159,13 @@ scene(SCENE.GAME, (rawIndex = 0) => {
     }
   }
 
-  addButton('↺ Restart', vec2(width() / 2, height() - FOOTER_H / 2), () => {
-    go(SCENE.GAME, levelIndex)
-  })
+  const restartButton = addButton(
+    '↺ Restart',
+    vec2(width() / 2, height() - FOOTER_H / 2),
+    () => {
+      go(SCENE.GAME, levelIndex)
+    },
+  )
 
   const { map, tileWidth, tileHeight } = level
   for (let row = 0; row < map.length; row++) {
@@ -202,8 +206,8 @@ scene(SCENE.GAME, (rawIndex = 0) => {
   }
 
   function checkWin() {
-    const remaining = get(TAG.DOT)
-    if (remaining.length === 0) {
+    if (!get(TAG.DOT).length) {
+      restartButton.destroy()
       wait(0.4, () => {
         go(SCENE.LEVEL_COMPLETE, levelIndex)
       })
