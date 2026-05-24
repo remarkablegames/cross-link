@@ -1,5 +1,5 @@
 import { UI } from '../constants'
-import { isMuted, toggleMute } from '../music'
+import { isMuted, toggleMute } from '../utils/music'
 
 export function addMuteButton() {
   const label = () => (isMuted() ? '🔇' : '🔊')

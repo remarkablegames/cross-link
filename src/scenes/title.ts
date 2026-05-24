@@ -3,7 +3,7 @@ import type { GameObj, PosComp, ScaleComp } from 'kaplay'
 import { COLOR, SCENE } from '../constants'
 import { addButton } from '../gameobjects/button'
 import { addMuteButton } from '../gameobjects/mute-button'
-import { startMusic } from '../music'
+import { startMusic } from '../utils/music'
 
 const ORBITAL_COLORS: [number, number, number][] = [
   COLOR.GOLD_RGB,

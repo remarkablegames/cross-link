@@ -1,6 +1,6 @@
 import type { AudioPlay } from 'kaplay'
 
-import { SOUND } from './constants'
+import { SOUND } from '../constants'
 
 const STORAGE_KEY = 'org.remarkablegames.cross-link.muted'
 

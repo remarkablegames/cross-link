@@ -1,6 +1,6 @@
 import kaplay from 'kaplay'
 
-import { addStars } from './stars'
+import { addStars } from './utils/stars'
 
 kaplay({
   width: 600,
