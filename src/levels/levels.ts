@@ -235,7 +235,7 @@ export const LEVELS: Level[] = [
 
   {
     // Level 9 — [description]: 10 pairs (3 gold + 2 cyan + 2 rose + green + 2 white)
-    // solution: [TBD]
+    // solution: cyan → green (clears both) → gold → rose (clears both) → rose → gold (clears both) → white → gold (clears both)
     map: [
       '. . . . . r . . g . . .',
       '. . . g . . . . r . . .',
@@ -252,7 +252,7 @@ export const LEVELS: Level[] = [
     ],
     tileWidth: 50,
     tileHeight: 50,
-    hints: [''],
+    hints: ['Every chain has a first link'],
   },
 
   /*
