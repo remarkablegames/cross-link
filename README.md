@@ -17,6 +17,8 @@ Play the game on:
 - [Wavedash](https://wavedash.com/games/cross-link)
 - [remarkablegames](https://remarkablegames.org/cross-link/)
 
+Read the [blog post](https://remarkablegames.org/posts/cross-link/).
+
 ## How to Play
 
 1. **Connect the dots** – Tap a colored star, then tap another star of the same color to draw a line between them.
