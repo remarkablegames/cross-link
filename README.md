@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/favicon.png" width="200" alt="Cross-Link">
+  <img src="public/favicon.svg" width="200" alt="Cross-Link">
 </p>
 
 # Cross-Link
@@ -55,13 +55,6 @@ Install the dependencies:
 ```sh
 npm install
 ```
-
-Update the files:
-
-- [ ] `index.html`
-- [ ] `public/app-icon.png`
-- [ ] `public/favicon.png`
-- [ ] `public/manifest.webmanifest`
 
 ## Environment Variables
 

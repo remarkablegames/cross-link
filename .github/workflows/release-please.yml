@@ -79,7 +79,7 @@ jobs:
           window-title: ${{ steps.vars.outputs.window_title }}
           window-width: 600
           window-height: 800
-          icon-path: public/app-icon.png
+          icon-path: public/favicon.svg
         env:
           APPLE_SIGNING_IDENTITY: '-'
 

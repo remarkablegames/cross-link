@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Deep navy background matching game theme -->
+  <rect width="512" height="512" fill="#0a0a1a" rx="64" ry="64"/>
+
+  <!-- Diagonal line connecting the two dots -->
+  <line x1="160" y1="352" x2="352" y2="160" stroke="#4fc3f7" stroke-width="24" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Gold dot (bottom left) -->
+  <circle cx="160" cy="352" r="48" fill="#f5c542"/>
+  <circle cx="160" cy="352" r="48" fill="#f5c542" opacity="0.3" transform="scale(1.5) translate(-53.33 -117.33)"/>
+
+  <!-- Cyan dot (top right) -->
+  <circle cx="352" cy="160" r="48" fill="#4fc3f7"/>
+  <circle cx="352" cy="160" r="48" fill="#4fc3f7" opacity="0.3" transform="scale(1.5) translate(-117.33 -53.33)"/>
+</svg>
