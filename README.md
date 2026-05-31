@@ -103,7 +103,7 @@ WAVEDASH=true npm run bundle
 
 ## Testing
 
-Open a specific level by appending `?level=<number>` to the URL (e.g., `?level=2`):
+Start a specific level by appending `?level=<number>` to the URL (e.g., `?level=2`):
 
 ```sh
 open http://localhost:5173/?level=5
