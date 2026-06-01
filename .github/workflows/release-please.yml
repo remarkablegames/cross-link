@@ -22,7 +22,7 @@ jobs:
         with:
           release-type: node
 
-  deploy-itchio:
+  itchio:
     needs: release
     if: ${{ needs.release.outputs.release_created }}
     runs-on: ${{ matrix.os }}
@@ -105,7 +105,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
 
-  deploy-wavedash:
+  wavedash:
     needs: release
     if: ${{ needs.release.outputs.release_created }}
     runs-on: ubuntu-latest
